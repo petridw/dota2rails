@@ -1,0 +1,18 @@
+<h2>Is there a divine rapier in a pro dota 2 game right now?</h2>
+
+<% if true %>
+  <% if @divine %>
+    <h1>YEP:</h1>
+    <ul>
+    <% @divinelist.each do |p| %>
+      <li>
+        '<%= p[:name] %>' on <%= p[:hero] %>
+      </li>
+    <% end %>
+    </ul>
+  <% else  %>
+    <h3>Nope :(</h3>
+  <% end %>
+<% else %>
+  <h3>Couldn't load match data :( try again soon!</h3>
+<% end %>
